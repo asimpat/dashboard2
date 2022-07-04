@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ==========================Font========================== */
+
+@font-face {
+    font-family: "poppins";
+    src: url(../fonts/roboto-regular-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "robotoregular", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: var(--bg-primary);
+}
+
+nav {
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background: var(--bg-secondary);
+    transition: .5s;
+    overflow: hidden;
+}
+
+nav.active {
+    width: 300px;
+}
+
+/* nav:hover {
+    width: 300px;
+} */
+
+nav ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+nav ul li {
+    list-style: none;
+    width: 100%;
+    position: relative;
+
+}
+
+nav ul li a:hover {
+    color: var(--bg-primary);
+}
+
+nav ul li:hover a::before {
+    background-color: var(--bg-active);
+    width: 100%;
+}
+
+nav ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cl-text);
+    transition: .2s;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: .2s;
+}
+
+nav ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+nav ul li a .title {
+    position: relative;
+    font-size: .85em;
+}
+
+nav ul li a .icon * {
+    font-size: 1.1em;
+}
+
+nav ul li a.toggle {
+    border-bottom: 3px solid var(--bg-primary);
+}
+
+.toggle {
+    cursor: pointer;
+}
+
+header {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 60px;
+        background: var(--bg-secondary);
+        color: var(--cl-text);
+    }
+
+    header a {
+        color: var(--cl-text)
+    }
+
+    nav {
+        left: -60px;
+    }
+
+    nav.active {
+        left: 0;
+        width: 100%;
+    }
+
+    nav ul li a.toggle {
+        display: none;
+    }
+}
+
+:root {
+    --bg-primary: #41444b;
+    --bg-secondary: #52575d;
+    --bg-active: #fddb3a;
+    --cl-text: #f6f4e6;
+}
+
+.box1{
+    background-color:#41444b;
+    /* min-height: 60vh; */
+}
+.box2{
+    background-color: rgb(173, 169, 169);
+}
+.line1{
+    background-color: orange;
+    height: 8px;
+    width: 40%;
+    border-radius: 10px 0px 0px 10px;
+}
+.line2{
+    background-color: rgb(197, 193, 193);
+    height: 8px;
+    width: 60%;
+    border-radius: 0px 10px 10px 0px;
+   
+}
+.line3{
+    background-color: red;
+    height: 8px;
+    width: 80%;
+    border-radius: 10px 0px 0px 10px;
+}
+.line4{
+    background-color: rgb(197, 193, 193);
+    height: 8px;
+    width: 20%;
+    border-radius: 0px 10px 10px 0px;
+   
+}
+.line5{
+    background-color: green;
+    height: 8px;
+    width: 65%;
+    border-radius: 10px 0px 0px 10px;
+}
+.line6{
+    background-color: rgb(197, 193, 193);
+    height: 8px;
+    width: 35%;
+    border-radius: 0px 10px 10px 0px;
+   
+}
+.text{
+
+   background-color: rgb(76, 184, 226);
+  
+}
+.text1{
+    background-image: linear-gradient(to right, rgb(7, 7, 71), rgb(18, 166, 224));
+    height: 7.95rem;
+}
+.oct{
+    font-weight: 400;
+}
+.date{
+    font-weight: 300;
+}
+.icon11{
+    font-size: 30px;
+    margin-top: 50px;
+    
+}
+.clock{
+    font-size: 90px;
+    color: skyblue;
+    position: absolute;
+    bottom: 8rem;
+    left: 40%;
+}
+.blue i{
+    border-radius: 50%;
+    background-color: white;
+}
+.image img{
+    border-radius: 50%;
+    position: absolute;
+    bottom: 6rem;
+    left: 35%;
+}
+.bx{
+    height: 8.5rem;
+}
+@media (max-width:991px) {
+    .first{
+        margin-bottom: 15px;
+    }
+    .second{
+        margin-bottom: 15px;
+    }
+    .third{
+        margin-bottom: 15px;
+    }
+}
+@media (max-width:575px) {
+    .box4{
+        margin-bottom: 15px;
+    }
+    .box5{
+        margin-bottom: 15px;
+    }
+    .box6{
+        margin-bottom: 15px;
+    }
+}
